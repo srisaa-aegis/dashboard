@@ -3,13 +3,27 @@
   "version": "0.1.0",
   "description": "A sales-pipeline dashboard for Angular: a pure core (formatters, chart-data builders, aggregation), reusable child widgets and the dashboard component that composes them.",
   "license": "MIT",
-  "keywords": ["dashboard", "pipeline", "angular", "primeng", "chart.js", "sales"],
+  "keywords": [
+    "dashboard",
+    "pipeline",
+    "angular",
+    "primeng",
+    "chart.js",
+    "sales"
+  ],
   "author": "Srisaa Technologies (OPC) Private Limited",
-  "repository": { "type": "git", "url": "git+https://github.com/srisaa-aegis/dashboard.git" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/srisaa-aegis/dashboard.git"
+  },
   "module": "./dist/fesm2022/stl-dashboard.mjs",
   "typings": "./dist/index.d.ts",
   "sideEffects": false,
-  "files": ["dist", "README.md"],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "ng-packagr -p ng-package.json -c tsconfig.lib.json",
     "typecheck": "tsc --noEmit -p tsconfig.test.json && ngc --noEmit -p tsconfig.demo.json",
@@ -23,7 +37,9 @@
     "chart.js": ">=4",
     "primeng": ">=19"
   },
-  "dependencies": { "tslib": "^2.6.0" },
+  "dependencies": {
+    "tslib": "^2.6.0"
+  },
   "devDependencies": {
     "@angular-devkit/build-angular": "^19.0.0",
     "@angular/animations": "^19.0.0",
@@ -50,5 +66,7 @@
     "typescript": "~5.6.0",
     "zone.js": "~0.15.0"
   },
-  "engines": { "node": ">=18" }
+  "engines": {
+    "node": ">=18"
+  }
 }

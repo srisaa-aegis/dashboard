@@ -82,3 +82,7 @@ or for tests.
 - Angular 19+, `primeng` 19+, `chart.js` 4+, a PrimeNG theme (`providePrimeNG`), `provideAnimationsAsync()`, PrimeIcons CSS.
 - **Tailwind**: the widgets use Tailwind utility classes. Add the library to your Tailwind `content`:
   `'./node_modules/stl-dashboard/dist/**/*.mjs'`.
+
+## License
+
+MIT, see [LICENSE](LICENSE).
