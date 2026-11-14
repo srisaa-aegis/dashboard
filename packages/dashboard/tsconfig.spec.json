@@ -1,0 +1,5 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": { "module": "commonjs", "moduleResolution": "node", "esModuleInterop": true, "importHelpers": false, "types": ["jest"] },
+  "include": ["test/**/*.ts", "src/lib/format.ts", "src/lib/chart-data.ts", "src/lib/models.ts"]
+}

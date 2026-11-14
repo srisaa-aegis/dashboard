@@ -1,0 +1,23 @@
+{
+  "name": "@srisaa/stat-card",
+  "version": "0.1.0",
+  "description": "KPI summary card",
+  "license": "MIT",
+  "sideEffects": false,
+  "scripts": {
+    "build": "ng-packagr -p ng-package.json -c tsconfig.lib.json"
+  },
+  "peerDependencies": {
+    "@angular/core": ">=19",
+    "@angular/common": ">=19"
+  },
+  "dependencies": {
+    "tslib": "^2.6.0"
+  },
+  "module": "./dist/fesm2022/srisaa-stat-card.mjs",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ]
+}

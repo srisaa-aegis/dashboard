@@ -1,0 +1,14 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "./dist",
+  "lib": {
+    "entryFile": "src/public-api.ts"
+  },
+  "allowedNonPeerDependencies": [
+    "@srisaa/stat-card",
+    "@srisaa/chart-card",
+    "@srisaa/data-table",
+    "@srisaa/filter-bar",
+    "@srisaa/drilldown-dialog"
+  ]
+}

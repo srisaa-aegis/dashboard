@@ -1,0 +1,24 @@
+{
+  "name": "@srisaa/data-table",
+  "version": "0.1.0",
+  "description": "Paginated, column-driven data table",
+  "license": "MIT",
+  "sideEffects": false,
+  "scripts": {
+    "build": "ng-packagr -p ng-package.json -c tsconfig.lib.json"
+  },
+  "peerDependencies": {
+    "@angular/core": ">=19",
+    "@angular/common": ">=19",
+    "primeng": ">=19"
+  },
+  "dependencies": {
+    "tslib": "^2.6.0"
+  },
+  "module": "./dist/fesm2022/srisaa-data-table.mjs",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ]
+}
