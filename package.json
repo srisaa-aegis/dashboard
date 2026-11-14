@@ -1,17 +1,33 @@
 {
-  "name": "srisaa-dashboard-workspace",
-  "private": true,
+  "name": "stl-dashboard",
   "version": "0.1.0",
+  "description": "A sales-pipeline dashboard for Angular: a pure core (formatters, chart-data builders, aggregation), reusable child widgets and the dashboard component that composes them.",
+  "license": "MIT",
+  "keywords": ["dashboard", "pipeline", "angular", "primeng", "chart.js", "sales"],
+  "author": "Srisaa Technologies (OPC) Private Limited",
+  "repository": { "type": "git", "url": "git+https://github.com/srisaa-aegis/dashboard.git" },
+  "module": "./dist/fesm2022/stl-dashboard.mjs",
+  "typings": "./dist/index.d.ts",
+  "sideEffects": false,
+  "files": ["dist", "README.md"],
   "scripts": {
-    "build:packages": "npm run build -w @srisaa/stat-card && npm run build -w @srisaa/chart-card && npm run build -w @srisaa/data-table && npm run build -w @srisaa/filter-bar && npm run build -w @srisaa/drilldown-dialog && npm run build -w @srisaa/dashboard",
-    "build:demo": "npm run build -w srisaa-dashboard-demo",
-    "build": "npm run build:packages && npm run build:demo",
-    "build:standalone": "npm run build:packages && npm run build:standalone -w srisaa-dashboard-demo",
-    "dev": "npm run build:packages && npm run dev -w srisaa-dashboard-demo",
-    "typecheck": "npm run build:packages && npm run typecheck -w srisaa-dashboard-demo",
-    "test": "npm test -w @srisaa/dashboard"
+    "build": "ng-packagr -p ng-package.json -c tsconfig.lib.json",
+    "typecheck": "tsc --noEmit -p tsconfig.test.json && ngc --noEmit -p tsconfig.demo.json",
+    "test": "jest",
+    "demo": "node scripts/build-demo.js"
   },
+  "peerDependencies": {
+    "@angular/common": ">=19",
+    "@angular/core": ">=19",
+    "@angular/forms": ">=19",
+    "chart.js": ">=4",
+    "primeng": ">=19"
+  },
+  "dependencies": { "tslib": "^2.6.0" },
   "devDependencies": {
+    "@angular-devkit/build-angular": "^19.0.0",
+    "@angular/animations": "^19.0.0",
+    "@angular/cli": "^19.0.0",
     "@angular/common": "^19.0.0",
     "@angular/compiler": "^19.0.0",
     "@angular/compiler-cli": "^19.0.0",
@@ -19,16 +35,20 @@
     "@angular/forms": "^19.0.0",
     "@angular/platform-browser": "^19.0.0",
     "@primeng/themes": "^19.1.4",
+    "@types/jest": "^29.5.12",
+    "autoprefixer": "^10.4.0",
     "chart.js": "^4.5.1",
+    "esbuild": "^0.25.0",
+    "jest": "^29.7.0",
     "ng-packagr": "^19.0.0",
+    "postcss": "^8.4.0",
+    "primeicons": "^7.0.0",
     "primeng": "^19.1.4",
     "rxjs": "~7.8.0",
-    "tslib": "^2.6.0",
+    "tailwindcss": "^3.4.0",
+    "ts-jest": "^29.1.0",
     "typescript": "~5.6.0",
     "zone.js": "~0.15.0"
   },
-  "workspaces": [
-    "packages/*",
-    "demo"
-  ]
+  "engines": { "node": ">=18" }
 }
